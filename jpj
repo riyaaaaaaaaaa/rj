@@ -49,28 +49,37 @@ public int findSumeetSum(int input1,int input2, int input3,int input4)
 *******************************************
 STAR AND HASH *#
 
-	
-Public class Main
+	package pracprac;
+class sh{
+public int star_hash(int row,int star,int inc) {
+int hash,temp,sum=0;
+hash=star;
+for(int i=1;i<=row;i++)
 {
-		public static void main(String[] args) {
-		int row =4,star = 2,inc =1;
-		int hash,temp,sum=0;
-		hash=star;for(int i=1;i<=row;i++)
-		{
-		    if(i!=1){
-		        temp=(star*i)+(hash*(i-1));
-		    }
-		    else{
-		        temp=star*i;
-		    }
-		    sum=temp+sum;
-		    temp=0;
-		    star=hash;
-		    hash=star+inc;
-		}
-		System.out.println("sum: "+sum);
-		}
-	}
+   if(i!=1){
+       temp=(star*i)+(hash*(i-1));
+   }
+   else{
+       temp=star*i;
+   }
+   sum=temp+sum;
+   temp=0;
+   star=hash;
+   hash=star+inc;
+}
+return sum;
+}
+}
+
+public class starhash {
+public static void main(String[] args) {
+int row =4,star = 2,inc =1;
+int sum;
+sh s=new sh();
+sum=s.star_hash(row, star, inc);
+System.out.println("sum: "+sum);
+}
+}
 
 ******************************************************************************
 
